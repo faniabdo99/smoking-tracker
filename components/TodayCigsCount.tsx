@@ -17,7 +17,7 @@ function generateFormattedDateYesterday(){
 
 function generateFormattedDatePastWeek(){
     const date = new Date();
-    date.setDate(date.getDate() - 7);
+    date.setDate(date.getDate() - 8); // Subtract 8 days to exclude today
     return date.getFullYear() + '-' + String(date.getMonth() + 1).padStart(2, '0') + '-' + String(date.getDate()).padStart(2, '0');
 }
 
@@ -44,8 +44,9 @@ export function TodayCigsCount() {
 
             const { data: pastWeekData, error: pastWeekError } = await supabase
                 .from('smoking_history')
-                .select('cig_total:cig_count.sum()')
-                .gte('date', generateFormattedDatePastWeek());
+                .select('cig_total:cig_count.avg()')
+                .lt('date', generateFormattedDate())
+                .gt('date', generateFormattedDatePastWeek());
 
             setTodayCigsCount(todayData[0].cig_total);
             setYesterdayCigsCount(yesterdayData[0].cig_total);
