@@ -1,6 +1,7 @@
 {
   "expo": {
-    "name": "smoking-tracker",
+    "name": "Smoking Tracker",
+    "displayName": "Smoking Tracker",
     "slug": "smoking-tracker",
     "version": "1.0.0",
     "orientation": "portrait",
@@ -13,13 +14,15 @@
       "backgroundColor": "#ffffff"
     },
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.abdofani99.smokingtracker"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.abdofani99.smokingtracker"
     },
     "web": {
       "bundler": "metro",
@@ -31,6 +34,14 @@
     ],
     "experiments": {
       "typedRoutes": true
+    },
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "f07167f3-145e-4163-b331-765ebf94b044"
+      }
     }
   }
 }
