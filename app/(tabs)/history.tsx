@@ -12,7 +12,8 @@ export default function TabTwoScreen() {
     async function getSmokingHistory() {
       const { data, error } = await supabase
         .from('smoking_history')
-        .select('date, cig_total:cig_count.sum()');
+        .select('date, cig_total:cig_count.sum()')
+        .order('date', { ascending: false });
         setSmokingHistory(data);
     }
     getSmokingHistory();

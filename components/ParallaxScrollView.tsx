@@ -63,14 +63,13 @@ const styles = StyleSheet.create({
     overflow: 'hidden',
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#A1CEDC'
+    backgroundColor: '#4CAF50'
   },
   content: {
     flex: 1,
     padding: 32,
     gap: 16,
-    backgroundColor: '#ffffff',
-    overflow: 'hidden',
+    overflow: 'hidden'
   },
   title:{
     margin: 0,

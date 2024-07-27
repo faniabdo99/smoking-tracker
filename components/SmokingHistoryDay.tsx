@@ -5,7 +5,7 @@ import { StyleSheet } from 'react-native';
 export function SmokingHistoryDay({ date, cigTotal }: { date: string, cigTotal: number }) {
     return (
         <ThemedView style={styles.container}>
-            <ThemedText>{date}</ThemedText>
+            <ThemedText type="card-content">{date}</ThemedText>
             <ThemedView style={styles.cigsContainer}>
                 <ThemedText style={styles.cigsText}>Smoked: {cigTotal}</ThemedText>
             </ThemedView>

@@ -68,9 +68,9 @@ export function TodayCigsCount() {
 
     return (
         <ThemedView style={styles.container}>
-            <ThemedText>Smoked Today: {todayCigsCount}</ThemedText>
-            <ThemedText>Smoked Yesterday: {yesterdayCigsCount}</ThemedText>
-            <ThemedText>Today's Allowance: {todayAllowance - todayCigsCount}</ThemedText>
+            <ThemedText type="card-content">Smoked Today: {todayCigsCount}</ThemedText>
+            <ThemedText type="card-content">Smoked Yesterday: {yesterdayCigsCount}</ThemedText>
+            <ThemedText type="card-content">Today's Allowance: {todayAllowance - todayCigsCount}</ThemedText>
         </ThemedView>
     );
 }
